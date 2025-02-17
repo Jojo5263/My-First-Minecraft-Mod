@@ -25,15 +25,14 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TABS = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
-                    .withTabsAfter(ALEXANDRITE_MODE_TABS.getId())
-                    .title(Component.translatable("creativetab.tutorialmod.alexandrite_blocks"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
-                        output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
-
-                    }).build());
+public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TABS = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
+                    () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
+                            .withTabsAfter(ALEXANDRITE_MODE_TABS.getId())
+                            .title(Component.translatable("creativetab.tutorialmod.alexandrite_blocks"))
+                            .displayItems((itemDisplayParameters, output) -> {
+                                output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
+                                output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                            }).build());
 
 
     public static void register(IEventBus eventBus)
