@@ -2,6 +2,7 @@ package net.jojo.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.jojo.tutorialmod.block.ModBlocks;
+import net.jojo.tutorialmod.item.ModCreativeModeTabs;
 import net.jojo.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -39,6 +40,8 @@ public class TutorialMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -59,6 +62,7 @@ public class TutorialMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
             event.accept(ModItems.ALEXANDRITE);
