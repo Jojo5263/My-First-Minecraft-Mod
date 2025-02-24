@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
 
                     output.accept(ModItems.CHISEL.get());
 
+                        output.accept(ModBlocks.MAGIC_BLOCK.get());
+
                     }).build());
 
 public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TABS = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
